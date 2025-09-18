@@ -55,7 +55,6 @@ class TreeNode:
         chosen_index -= 1
         chosen_child = story_node.choices[chosen_index]
         print(chosen_child.story_piece)
-        story_node = chosen_child
 
 
 story_root = TreeNode("""
@@ -118,6 +117,6 @@ choice_b.add_child(choice_b_1)
 choice_b.add_child(choice_b_2)
 choice_b.traverse()
 
-#print(story_root.story_piece)
+print(story_root.story_piece)
 #user_choice = input("What is your name?\n")
 #print(user_choice)
