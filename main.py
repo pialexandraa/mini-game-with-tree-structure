@@ -14,7 +14,7 @@ def main():
       print("Invalid option. This is not yes/no.")
       exit_program()
     else:
-      pass  # User said yes, continue with the game
+      pass
   except Exception as message:
     print(f"An error occured: {message}")
     exit_program()
