@@ -4,6 +4,5 @@
 # Ignore replit cache files
 .replit
 
-
 # Ignore virtual environment folder
-.local/
+local/
