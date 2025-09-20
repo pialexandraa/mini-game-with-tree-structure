@@ -2,7 +2,7 @@
 name = "test-1"
 version = "0.1.0"
 description = ""
-authors = ["Alexandra P."]
+authors = ["pialexandraa"]
 
 [tool.poetry.dependencies]
 python = ">=3.8.0,<3.9"
