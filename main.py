@@ -1,27 +1,33 @@
 import sys
 
+def timed_print(message, type_delay=0.03, message_delay=6):
+  for character in message:
+    print(character, end='', flush=True)
+    time.sleep(type_delay)
+  time.sleep(message_delay)
+  return
 
 def main():
   try:
-    print("Welcomg to the game!")
+    timed_print("Welcomg to the game!")
 
     #check for user agreement
     user_input = input("Are you ready to start? (yes/no) ")
     if user_input.lower() == "no":
-      print("Sad to see you go. Stopping the game.")
+      timed_print("Sad to see you go. Stopping the game.")
       exit_program()
     elif user_input.lower() != "yes":
-      print("Invalid option. This is not a 'yes/no' answer.")
+      timed_print("Invalid option. This is not a 'yes/no' answer.")
       exit_program()
     else:
       pass
   except Exception as message:
-    print(f"An error occured: {message}")
+    timed_print(f"An error occured: {message}")
     exit_program()
 
 
 def exit_program():
-  print("Exiting program...")
+  timed_print("Exiting program...")
   #zero as the argument/exit code for function
   sys.exit(0)
 
@@ -30,7 +36,7 @@ def exit_program():
 if __name__ == "__main__":
   main()
 
-print("Once upon a time...")
+timed_print("Once upon a time...")
 
 
 class TreeNode:
@@ -59,7 +65,7 @@ class TreeNode:
 
 story_root = TreeNode("""
 You are in a forest. There is a path to the left.
-A bear appears out of nowhere and roars!
+A lion appears out of nowhere and roars!
 Do you: 
 1 ) Roar back!
 2 ) Run to the left...
@@ -74,9 +80,9 @@ Do you:
 
 choice_b = TreeNode("""
 After turning to the left, you come across a clearing full of flowers. 
-The bear followed you but now he starts talking; 'what is going on?', he asks you.
+The lion followed you but now he starts talking; 'what is going on?', he asks you.
 Do you:
-1 ) Gasp 'Wow, a talking bear!'
+1 ) Gasp 'Wow, a talking lion!'
 2 ) Explain that you are scared, and that you are looking for an escape.
 """)
 
@@ -85,13 +91,13 @@ story_root.add_child(choice_b)
 #story_root.traverse()
 
 choice_a_1 = TreeNode("""
-The bear returns and he seems to be saying something. Wow, a talking bear! In the end, he helps you and shows you the way out of the forest.
+The bear returns and he seems to be saying something. Wow, a talking lion! In the end, he helps you and shows you the way out of the forest.
 
 YOU HAVE ESCAPED THE WILDERNESS.
 """)
 
 choice_a_2 = TreeNode("""
-The bear returns, roars one more time at you meanly, and then he leaves you alone in the wilderness.
+The lion returns, roars one more time at you meanly, and then he leaves you alone in the wilderness.
 
 YOU REMAIN LOST.
 """)
@@ -101,13 +107,13 @@ choice_a.add_child(choice_a_2)
 #choice_a.traverse()
 
 choice_b_1 = TreeNode("""
-The bear is unamused by your remark. He turns around and leaves you alone.
+The lion is unamused by your remark. He turns around and leaves you alone.
 
 YOU REMAIN LOST.
 """)
 
 choice_b_2 = TreeNode("""
-The bear understands and apologizes for scaring you. Your new friend shows you a 
+The lion understands and apologizes for scaring you. Your new friend shows you a 
 path leading out of the forest.
 
 YOU HAVE ESCAPED THE WILDERNESS.
