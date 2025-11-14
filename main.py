@@ -72,7 +72,7 @@ Do you:
 """)
 
 choice_a = TreeNode("""
-The bear is scared on his end, and he just runs away.
+The lion is scared on his end, and he just runs away.
 Do you:
 1 ) Shout 'Sorry bear!'
 2 ) Happily say 'Hooray!'
@@ -91,7 +91,7 @@ story_root.add_child(choice_b)
 #story_root.traverse()
 
 choice_a_1 = TreeNode("""
-The bear returns and he seems to be saying something. Wow, a talking lion! In the end, he helps you and shows you the way out of the forest.
+The lion returns and he seems to be saying something. Wow, a talking lion! In the end, he helps you and shows you the way out of the forest.
 
 YOU HAVE ESCAPED THE WILDERNESS.
 """)
@@ -116,7 +116,7 @@ choice_b_2 = TreeNode("""
 The lion understands and apologizes for scaring you. Your new friend shows you a 
 path leading out of the forest.
 
-YOU HAVE ESCAPED THE WILDERNESS.
+YOU HAVE ESCAPED THE MAGIC FOREST.
 """)
 choice_b.add_child(choice_b_1)
 choice_b.add_child(choice_b_2)
