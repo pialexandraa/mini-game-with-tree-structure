@@ -1,4 +1,6 @@
+import time
 import sys
+import os
 
 def timed_print(message, type_delay=0.03, message_delay=6):
   for character in message:
@@ -7,12 +9,17 @@ def timed_print(message, type_delay=0.03, message_delay=6):
   time.sleep(message_delay)
   return
 
+def clear_screen():
+  os.system('cls' if os.name == 'nt' else 'clear')
+  return
+
 def main():
   try:
     timed_print("Welcomg to the game!")
-
+    clear_screen()
+    
     #check for user agreement
-    user_input = input("Are you ready to start? (yes/no) ")
+    user_input = input("Are you ready to start? Insert your answer: yes/no \n")
     if user_input.lower() == "no":
       timed_print("Sad to see you go. Stopping the game.")
       exit_program()
@@ -20,7 +27,7 @@ def main():
       timed_print("Invalid option. This is not a 'yes/no' answer.")
       exit_program()
     else:
-      pass
+      pass #c ontinue
   except Exception as message:
     timed_print(f"An error occured: {message}")
     exit_program()
@@ -74,7 +81,7 @@ Do you:
 choice_a = TreeNode("""
 The lion is scared on his end, and he just runs away.
 Do you:
-1 ) Shout 'Sorry bear!'
+1 ) Shout 'Sorry lion!'
 2 ) Happily say 'Hooray!'
 """)
 
